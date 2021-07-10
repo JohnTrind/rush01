@@ -12,10 +12,11 @@ int ft_grid(int counts, char *values)
     int dois = 0;
     int tres = 0;
     int quatro = 0;
+    int numeros = 0;
     while(*values != 0)
     {
-        if ((*values != ' ' && *values != '1' && *values != '2'
-		&& *values != '3' && *values != '4'))
+        if (*values != ' ' && *values != '1' && *values != '2'
+		&& *values != '3' && *values != '4')
 		{
 			error();
             return (0);
@@ -25,6 +26,8 @@ int ft_grid(int counts, char *values)
         values++;
         if(*values == ' ')
         spaces++;
+        else
+        numeros++;
         if(*values == '1')
         um++;
         else if(*values == '2')
@@ -34,8 +37,8 @@ int ft_grid(int counts, char *values)
         else if(*values == '4')
         quatro++;
     }
-    
-    if(i!=31 && spaces!=15)
+
+    if(i!=31 || spaces!=15 || numeros !=16)
     {
         error();
         return(0);
@@ -46,7 +49,7 @@ int ft_grid(int counts, char *values)
         return(0);
     }
     
-
+    printf("numeros %d\n" , numeros);
     printf("um %d\n",um);
     printf("dois %d\n",dois);
     printf("tres %d\n",tres);
