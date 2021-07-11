@@ -3,6 +3,7 @@
 void put_char(int c);
 void	put_str(char *str);
 int error();
+void create_matrix(char *values);
 
 int ft_grid(int counts, char *values)
 {
@@ -13,6 +14,7 @@ int ft_grid(int counts, char *values)
     int tres = 0;
     int quatro = 0;
     int numeros = 0;
+    char *values2 = values;
     while(*values != 0)
     {
         if (*values != ' ' && *values != '1' && *values != '2'
@@ -49,6 +51,8 @@ int ft_grid(int counts, char *values)
         return(0);
     }
     
+    create_matrix(values2);
+
     printf("numeros %d\n" , numeros);
     printf("um %d\n",um);
     printf("dois %d\n",dois);
