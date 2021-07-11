@@ -4,9 +4,9 @@
 
 void	put_str(char *str);
 void    put_char(char c);
-void    organizar(int *topo, int *base , int *esquerda, int *direita);
+int  organizar(int *inteiros);
 
-void create_matrix(char  *values)
+void converterint(char  *values)
 {
     int i = 0;
     int t = 0;
@@ -39,51 +39,52 @@ void create_matrix(char  *values)
     }
     t=0;
 
-    while(inteiros[t] <=4)
-    {
-        topo[t]=inteiros[t];
-        t++;
-    }
-    while(inteiros[t] <=8)
-    {
-        base[b]=inteiros[t];
-        b++;
-    }
-    while(inteiros[t] <=12)
-    {
-        esquerda[e]=inteiros[t];
-        e++;
-    }
-    while(inteiros[t] <=16)
-    {
-        direita[d]=inteiros[t];
-        d++;
-    }
+    organizar(inteiros);
 
-    organizar( topo,  base ,  esquerda,  direita);
+    // while(inteiros[t] <=4)
+    // {
+    //     topo[t]=inteiros[t];
+    //     t++;
+    // }
+    // while(inteiros[t] <=8)
+    // {
+    //     base[b]=inteiros[t];
+    //     b++;
+    // }
+    // while(inteiros[t] <=12)
+    // {
+    //     esquerda[e]=inteiros[t];
+    //     e++;
+    // }
+    // while(inteiros[t] <=16)
+    // {
+    //     direita[d]=inteiros[t];
+    //     d++;
+    // }
 
-    i=0;
-    while(i!=4)
-    {
-    printf("topo %d\n",topo[i]);
-    i++;
-    }
-    i=0;
-    while(i!=4)
-    {
-    printf("base %d\n",base[i]);
-    i++;
-    }
-    i=0;
-    while(i!=4)
-    {
-    printf("esquerda %d\n",esquerda[i]);
-    i++;
-    }
-    i=0;
-    while(i!=4)
-    {
-    printf("direita %d\n",direita[i]);
-    i++;
-    }
+
+    // i=0;
+    // while(i!=4)
+    // {
+    // printf("topo %d\n",topo[i]);
+    // i++;
+    // }
+    // i=0;
+    // while(i!=4)
+    // {
+    // printf("base %d\n",base[i]);
+    // i++;
+    // }
+    // i=0;
+    // while(i!=4)
+    // {
+    // printf("esquerda %d\n",esquerda[i]);
+    // i++;
+    // }
+    // i=0;
+    // while(i!=4)
+    // {
+    // printf("direita %d\n",direita[i]);
+    // i++;
+    // }
 }
